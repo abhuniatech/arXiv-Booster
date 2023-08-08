@@ -1,0 +1,38 @@
+/* styles.css */
+
+#button-group-container {
+  display: flex;
+  margin-left: 20px;
+}
+
+#button-group-container button {
+  margin-right: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: calc(100% + 5px); /* Add 5px gap below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "arXiv Booster (beta)",
+  "version": "1.0",
+  "description": "Enhances the power of arXiv website",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://arxiv.org/abs/*",
+    "https://arxiv.org/pdf/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "empty.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arxiv.org/abs/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    },
+    {
+      "matches": [ 
+        "https://arxiv.org/pdf/*"
+      ],
+      "js": [
+        "content2.js"
+      ]
+    }
+  ]
+}
